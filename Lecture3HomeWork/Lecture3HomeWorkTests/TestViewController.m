@@ -40,11 +40,11 @@
 }
 
 - (void)testIndexPower {
-    NSNumber *num1 = [self.viewController indexPower:@[@0, @1, @2, @3, @4] index:2];
+    NSNumber *num1 = [self.viewController indexPower:@[@0, @1, @2, @3, @4] index:3];
     NSNumber *num2 = [self.viewController indexPower:@[@1, @3, @10, @100] index:3];
     NSNumber *num3 = [self.viewController indexPower:@[@0, @1] index:0];
     NSNumber *num4 = [self.viewController indexPower:@[@1, @2] index:3];
-    XCTAssertEqualObjects(@9, num1, @"indexPower ошибка @[@0, @1, @2, @3, @4] index:2");
+    XCTAssertEqualObjects(@27, num1, @"indexPower ошибка @[@0, @1, @2, @3, @4] index:2");
     XCTAssertEqualObjects(@1000000, num2, @"indexPower ошибка @[@1, @3, @10, @100] index:3");
     XCTAssertEqualObjects(@1, num3, @"indexPower ошибка @[@0, @1] index:0");
     XCTAssertEqualObjects(@(-1), num4, @"indexPower ошибка @[@1, @2] index:3");

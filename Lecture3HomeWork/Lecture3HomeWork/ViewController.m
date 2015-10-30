@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSNumber *myNum = [self indexPower:@[] index:2];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +33,15 @@
 Для пустого массива результат всегда 0 (ноль).*/
 
 - (NSNumber *)evenTheLast:(NSArray *)array {
-    return 0;
+    
+    NSInteger resultInt = 0;
+    
+    for (int i = 0; i < array.count; i+=2) {
+        resultInt += [array[i] integerValue];
+    }
+    
+    resultInt *= [array.lastObject integerValue];
+    return @(resultInt);
 }
 
 
@@ -41,8 +51,14 @@
 - массив = [1, 2, 3, 4] и N = 2, тогда результат 32 == 9;
 - массив = [1, 2, 3] и N = 3, но N за границами массива, так что результат -1.*/
 
-- (NSNumber *)indexPower:(NSArray *)array index:(NSInteger)index {
-    return 0;
+- (NSNumber *)indexPower:(NSArray *)array
+                   index:(NSInteger)index {
+    if (array.count < index) {
+        return @(-1);
+    }
+    NSInteger result = pow([array[index] doubleValue], index);
+    
+    return @(result);
 }
 
 /*В комьютерной науке и дискретной математике, инверсия - это пара позиций последовательности, где элементы на этих позициях выпадают из естественного порядка. Таким образом, если мы используем порядок по возрастанию для группы чисел, то инверсия получается, когда более крупные цифры стоят перед меньшим значением в последовательности.
@@ -53,19 +69,55 @@
  Вам дана последовательность уникальных чисел и вы должны подсчитать число инверсий в этой последовательности.*/
 
 - (NSNumber *)countInversion:(NSArray *)array {
-    return 0;
+    NSInteger result = 0;
+    for (int i = 0; i < array.count - 1; i++) {
+        for (int j = i+1; j < array.count; j++) {
+            if ([array[j] integerValue] < [array[i] integerValue]) {
+                result++;
+            }
+        }
+        
+    }
+    
+    return @(result);
 }
 
 /*Медиана - это числовое значение, которое делит сортированый массив чисел на большую и меньшую половины. В сортированом массиве с нечетным числом элементов медиана - это число в середине массива. Для массива с четным числом элементов, где нет одного элемента точно посередине, медиана - это среднее значение двух чисел, находящихся в середине массива. В этой задаче дан непустой массив натуральных чисел. Вам необходимо найти медиану данного массива.*/
 
 - (NSNumber *)median:(NSArray *)array {
-    return 0;
+    NSSortDescriptor *highestToLowest = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:NO];
+    NSArray *sortedArray = [array sortedArrayUsingDescriptors:@[highestToLowest]];
+    double result = 0;
+    if (sortedArray.count%2 == 0) {
+        result = ([sortedArray[array.count/2-1] doubleValue] + [sortedArray[array.count/2] doubleValue])/2;
+    } else {
+        result = [sortedArray[array.count/2] doubleValue];
+    }
+    
+    return @(result);
 }
 
 /*Дан непустой массив целых чисел (X). В этой задаче вам нужно вернуть массив, состоящий только из неуникальных элементов данного массива. Для этого необходимо удалить все уникальные элементы (которые присутствуют в данном массиве только один раз). Для решения этой задачи не меняйте оригинальный порядок элементов. Пример: [1, 2, 3, 1, 3], где 1 и 3 неуникальные элементы и результат будет [1, 3, 1, 3].*/
 
 - (NSArray *)nonUniqueElements:(NSArray *)array {
-    return nil;
+    NSMutableArray *result = [[NSMutableArray alloc] initWithArray:array];
+    BOOL isUniq = YES;
+    NSMutableIndexSet *set = [[NSMutableIndexSet alloc] init];
+    for (int i = 0; i < array.count; i++) {
+        isUniq = YES;
+        for (int j=0; j < array.count; j++) {
+            if (i != j && [array[i] integerValue] == [array[j] integerValue]) {
+                isUniq = NO;
+                break;
+            }
+        }
+        if (isUniq) {
+            [set addIndex:i];
+        }
+    }
+    
+    [result removeObjectsAtIndexes:set];
+    return result;
 }
 
 
