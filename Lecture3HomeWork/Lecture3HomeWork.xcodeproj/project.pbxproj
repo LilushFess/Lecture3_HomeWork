@@ -15,7 +15,11 @@
 		C4151B3B1BD81149002CAF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4151B391BD81149002CAF64 /* LaunchScreen.storyboard */; };
 		C4151B461BD81149002CAF64 /* Lecture3HomeWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4151B451BD81149002CAF64 /* Lecture3HomeWorkTests.m */; };
 		C4151B511BD81149002CAF64 /* Lecture3HomeWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4151B501BD81149002CAF64 /* Lecture3HomeWorkUITests.m */; };
-		C4151B5F1BD812C4002CAF64 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4151B5E1BD812C4002CAF64 /* TestViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C4151B5F1BD812C4002CAF64 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4151B5E1BD812C4002CAF64 /* TestViewController.m */; };
+		C46075FD1BE3FE91005E7BC9 /* ViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C46075FC1BE3FE91005E7BC9 /* ViewController+Category.m */; };
+		C46076001BE40032005E7BC9 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = C46075FF1BE40032005E7BC9 /* Car.m */; };
+		C46076031BE40074005E7BC9 /* Toyota.m in Sources */ = {isa = PBXBuildFile; fileRef = C46076021BE40074005E7BC9 /* Toyota.m */; };
+		C46076061BE40093005E7BC9 /* Lexus.m in Sources */ = {isa = PBXBuildFile; fileRef = C46076051BE40093005E7BC9 /* Lexus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		C4151B501BD81149002CAF64 /* Lecture3HomeWorkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lecture3HomeWorkUITests.m; sourceTree = "<group>"; };
 		C4151B521BD81149002CAF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4151B5E1BD812C4002CAF64 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		C46075FB1BE3FE91005E7BC9 /* ViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Category.h"; sourceTree = "<group>"; };
+		C46075FC1BE3FE91005E7BC9 /* ViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+Category.m"; sourceTree = "<group>"; };
+		C46075FE1BE40032005E7BC9 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		C46075FF1BE40032005E7BC9 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		C46076011BE40074005E7BC9 /* Toyota.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toyota.h; sourceTree = "<group>"; };
+		C46076021BE40074005E7BC9 /* Toyota.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toyota.m; sourceTree = "<group>"; };
+		C46076041BE40093005E7BC9 /* Lexus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lexus.h; sourceTree = "<group>"; };
+		C46076051BE40093005E7BC9 /* Lexus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lexus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,14 @@
 				C4151B2F1BD81149002CAF64 /* AppDelegate.m */,
 				C4151B311BD81149002CAF64 /* ViewController.h */,
 				C4151B321BD81149002CAF64 /* ViewController.m */,
+				C46075FE1BE40032005E7BC9 /* Car.h */,
+				C46075FF1BE40032005E7BC9 /* Car.m */,
+				C46076011BE40074005E7BC9 /* Toyota.h */,
+				C46076021BE40074005E7BC9 /* Toyota.m */,
+				C46076041BE40093005E7BC9 /* Lexus.h */,
+				C46076051BE40093005E7BC9 /* Lexus.m */,
+				C46075FB1BE3FE91005E7BC9 /* ViewController+Category.h */,
+				C46075FC1BE3FE91005E7BC9 /* ViewController+Category.m */,
 				C4151B341BD81149002CAF64 /* Main.storyboard */,
 				C4151B371BD81149002CAF64 /* Assets.xcassets */,
 				C4151B391BD81149002CAF64 /* LaunchScreen.storyboard */,
@@ -273,7 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46076001BE40032005E7BC9 /* Car.m in Sources */,
+				C46075FD1BE3FE91005E7BC9 /* ViewController+Category.m in Sources */,
 				C4151B331BD81149002CAF64 /* ViewController.m in Sources */,
+				C46076031BE40074005E7BC9 /* Toyota.m in Sources */,
+				C46076061BE40093005E7BC9 /* Lexus.m in Sources */,
 				C4151B301BD81149002CAF64 /* AppDelegate.m in Sources */,
 				C4151B2D1BD81149002CAF64 /* main.m in Sources */,
 			);
@@ -502,6 +526,7 @@
 				C4151B571BD81149002CAF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4151B581BD81149002CAF64 /* Build configuration list for PBXNativeTarget "Lecture3HomeWorkTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +535,7 @@
 				C4151B5A1BD81149002CAF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4151B5B1BD81149002CAF64 /* Build configuration list for PBXNativeTarget "Lecture3HomeWorkUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +544,7 @@
 				C4151B5D1BD81149002CAF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

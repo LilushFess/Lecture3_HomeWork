@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "ViewController+Category.h"
+#import "Toyota.h"
+#import "Lexus.h"
 
 @interface ViewController ()
 
@@ -16,8 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Toyota *car1 = [Toyota new];
+    Lexus *car2 = [Lexus new];
     
-    NSNumber *myNum = [self indexPower:@[] index:2];
+    NSArray *arr = @[car1, car2];
+    
+    for (NSObject* car in arr) {
+        if ([car isKindOfClass:[Car class]]) {
+            [(Car *)car name];
+        } else {
+            NSLog(@"Lex");
+        }
+    }
     
 }
 
